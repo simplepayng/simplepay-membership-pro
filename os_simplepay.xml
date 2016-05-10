@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install version="1.0" type="osmplugin" group="payment">
+    <name>os_simplepay</name>
+    <title>SimplePay Payments</title>
+    <author>SimplePay</author>
+    <creationDate>27-04-2016</creationDate>
+    <copyright>Copyright 2016 SimplePay</copyright>
+    <license>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL version 2</license>
+    <authorEmail>support@simplepay.ng</authorEmail>
+    <authorUrl>www.simplepay.ng</authorUrl>
+    <version>1.0</version>
+    <description>Online Payment Gateway for the Nigerian market</description>
+    <params />
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/administrator/components/com_osmembership/elements">
+                <field name="simplepay_mode" type="list" label="SimplePay API Mode" description="Test Mode or Live Mode">
+                    <option value="0">Test Mode</option>
+                    <option value="1">Live Mode</option>
+                </field>
+                <field name="simplepay_public_test_api_key" type="text" size="40" label="Public test API key" description="Enter your public test API key, obtain in the merchants dashboard" default=""></field>
+                <field name="simplepay_public_live_api_key" type="text" size="40" label="Public live API key" description="Enter your public live API key, obtain in the merchants dashboard" default=""></field>
+            </fieldset>
+        </fields>
+    </config>
+    <files>
+        <filename>os_simplepay.php</filename>
+    </files>
+    <installsql />
+    <installfile />
+</install>
